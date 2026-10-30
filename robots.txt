@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://souli20.github.io/porteflio/sitemap.xml

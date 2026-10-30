@@ -1,0 +1,14 @@
+{
+  "name": "Portfolio de Davy Souli",
+  "short_name": "Davy Souli",
+  "description": "Portfolio : statistique, économie, data et IA.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f7f3",
+  "theme_color": "#0A2540",
+  "icons": [
+    { "src": "assets/img/favicon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
