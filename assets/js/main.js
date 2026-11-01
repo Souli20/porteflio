@@ -1,6 +1,9 @@
 (function () {
   'use strict';
 
+  var EN = document.documentElement.lang === 'en';
+  function L(fr, en) { return EN ? en : fr; }
+
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return [].slice.call((c || document).querySelectorAll(s)); };
 
@@ -24,14 +27,14 @@
   function closeMenu() {
     if (!toggle) return;
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Ouvrir le menu');
+    toggle.setAttribute('aria-label', L('Ouvrir le menu', 'Open menu'));
     links.classList.remove('open');
   }
   if (toggle && links) {
     toggle.addEventListener('click', function () {
       var open = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!open));
-      toggle.setAttribute('aria-label', open ? 'Ouvrir le menu' : 'Fermer le menu');
+      toggle.setAttribute('aria-label', open ? L('Ouvrir le menu', 'Open menu') : L('Fermer le menu', 'Close menu'));
       links.classList.toggle('open', !open);
     });
     $$('a', links).forEach(function (a) { a.addEventListener('click', closeMenu); });
@@ -111,12 +114,12 @@
       if (!$('#consent').checked) ok = false;
       if (!ok) {
         status.className = 'form-status err';
-        status.textContent = 'Merci de remplir les champs obligatoires et de cocher la case de consentement.';
+        status.textContent = L('Merci de remplir les champs obligatoires et de cocher la case de consentement.', 'Please fill in the required fields and tick the consent box.');
         return;
       }
       btn.disabled = true;
       status.className = 'form-status';
-      status.textContent = 'Envoi en cours…';
+      status.textContent = L('Envoi en cours…', 'Sending…');
       fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
@@ -125,10 +128,10 @@
         if (!r.ok) throw new Error('bad status');
         form.reset();
         status.className = 'form-status ok';
-        status.textContent = 'Message envoyé, merci ! Je vous réponds bientôt.';
+        status.textContent = L('Message envoyé, merci ! Je vous réponds bientôt.', 'Message sent, thank you! I will reply soon.');
       }).catch(function () {
         status.className = 'form-status err';
-        status.textContent = "L'envoi a échoué. Réessayez plus tard ou contactez-moi via LinkedIn.";
+        status.textContent = L("L'envoi a échoué. Réessayez plus tard ou contactez-moi via LinkedIn.", 'Sending failed. Please try again later or contact me on LinkedIn.');
       }).then(function () { btn.disabled = false; });
     });
   }
