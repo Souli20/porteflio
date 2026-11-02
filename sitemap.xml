@@ -1,19 +1,28 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>https://souli20.github.io/porteflio/</loc>
+    <loc>https://davysouli.vercel.app/</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://souli20.github.io/porteflio/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://souli20.github.io/porteflio/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr"
+                href="https://davysouli.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://davysouli.vercel.app/en/"/>
   </url>
+
   <url>
-    <loc>https://souli20.github.io/porteflio/en/</loc>
+    <loc>https://davysouli.vercel.app/en/</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://souli20.github.io/porteflio/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://souli20.github.io/porteflio/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr"
+                href="https://davysouli.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="en"
+                href="https://davysouli.vercel.app/en/"/>
   </url>
+
 </urlset>
