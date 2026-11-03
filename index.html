@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
+<script>
+  if (window.location.hostname === "souli20.github.io") {
+    const newPath = window.location.pathname
+      .replace(/^\/porteflio(?=\/|$)/, "") || "/";
+
+    window.location.replace(
+      "https://davysouli.vercel.app" +
+      newPath +
+      window.location.search +
+      window.location.hash
+    );
+  }
+</script>
+
 <title>Davy Souli | Élève ingénieur statisticien économiste (ISSEA)</title>
 <meta name="description" content="Portfolio de Davy Souli, élève ingénieur statisticien économiste à l'ISSEA : statistique, data science, IA (RAG) et Big Data.">
 <meta name="author" content="Davy Souli">
@@ -12,16 +26,16 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://davysouli.vercel.app/">
 
-<link rel="alternate" hreflang="fr" href="https://souli20.github.io/porteflio/">
-<link rel="alternate" hreflang="en" href="https://souli20.github.io/porteflio/en/">
-<link rel="alternate" hreflang="x-default" href="https://souli20.github.io/porteflio/">
+<link rel="alternate" hreflang="fr" href="https://davysouli.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://davysouli.vercel.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://davysouli.vercel.app/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://souli20.github.io/porteflio/">
+<meta property="og:url" content="https://davysouli.vercel.app/">
 <meta property="og:title" content="Davy Souli | Statistique, Économie, Data &amp; IA">
 <meta property="og:description" content="Portfolio d'un élève ingénieur statisticien économiste : projets, certifications et parcours.">
-<meta property="og:image" content="https://souli20.github.io/porteflio/assets/img/og-image.png">
+<meta property="og:image" content="https://davysouli.vercel.app/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Portfolio de Davy Souli — Statistique, Économie, Data et IA">
@@ -33,10 +47,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Davy Souli | Statistique, Économie, Data &amp; IA">
 <meta name="twitter:description" content="Portfolio d'un élève ingénieur statisticien économiste : projets, certifications et parcours.">
-<meta name="twitter:image" content="https://souli20.github.io/porteflio/assets/img/og-image.png">
+<meta name="twitter:image" content="https://davysouli.vercel.app/assets/img/og-image.png">
 
 <meta name="theme-color" content="#0A2540">
-<link rel="icon" href="assets/img/davy_im.png" type="image/png">
+<link rel="icon" href="assets/img/davy_im.jpeg" type="image/jpeg">
 <link rel="apple-touch-icon" href="assets/img/davy_im.png">
 <link rel="manifest" href="site.webmanifest">
 
@@ -50,22 +64,35 @@
 </script>
 <link rel="stylesheet" href="assets/css/style.css">
 
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://souli20.github.io/porteflio/#person",
+      "@id": "https://davysouli.vercel.app/#person",
       "name": "Davy Souli",
-      "alternateName": ["SOULI Wênd-Manegda Davy", "Wênd-Manegda Davy Souli"],
-      "url": "https://souli20.github.io/porteflio/",
+      "alternateName": [
+        "SOULI Wênd-Manegda Davy",
+        "Wênd-Manegda Davy Souli"
+      ],
+      "url": "https://davysouli.vercel.app/",
       "jobTitle": "Élève ingénieur statisticien économiste",
       "affiliation": {
         "@type": "EducationalOrganization",
         "name": "Institut Sous-régional de Statistique et d'Économie Appliquée (ISSEA)"
       },
-      "knowsAbout": ["Statistique", "Économie quantitative", "Data science", "Intelligence artificielle", "RAG", "Big Data", "Analyse de données", "Programmation"],
+      "knowsAbout": [
+        "Statistique",
+        "Économie quantitative",
+        "Data science",
+        "Intelligence artificielle",
+        "RAG",
+        "Big Data",
+        "Analyse de données",
+        "Programmation"
+      ],
       "sameAs": [
         "https://github.com/Souli20",
         "https://www.linkedin.com/in/davy-souli-b00907375"
@@ -73,19 +100,25 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://souli20.github.io/porteflio/#website",
-      "url": "https://souli20.github.io/porteflio/",
+      "@id": "https://davysouli.vercel.app/#website",
+      "url": "https://davysouli.vercel.app/",
       "name": "Portfolio de Davy Souli",
       "inLanguage": "fr-FR",
-      "publisher": { "@id": "https://souli20.github.io/porteflio/#person" }
+      "publisher": {
+        "@id": "https://davysouli.vercel.app/#person"
+      }
     },
     {
       "@type": "ProfilePage",
-      "@id": "https://souli20.github.io/porteflio/#webpage",
-      "url": "https://souli20.github.io/porteflio/",
+      "@id": "https://davysouli.vercel.app/#webpage",
+      "url": "https://davysouli.vercel.app/",
       "name": "Davy Souli — Portfolio",
-      "isPartOf": { "@id": "https://souli20.github.io/porteflio/#website" },
-      "mainEntity": { "@id": "https://souli20.github.io/porteflio/#person" },
+      "isPartOf": {
+        "@id": "https://davysouli.vercel.app/#website"
+      },
+      "mainEntity": {
+        "@id": "https://davysouli.vercel.app/#person"
+      },
       "inLanguage": "fr-FR"
     }
   ]
